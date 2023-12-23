@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import LoginPage from "./pages/Auth";
 import Car from "./pages/Car";
 import Bike from "./pages/Bike";
+import Profile from "./pages/Profile";
 
 function Layout() {
   return (
@@ -24,6 +25,7 @@ const Router = () => {
           <Route path="/bike" element={<Bike />} />
         </Route>
         <Route path="/login" element={<LoginPage />}></Route>
+        <Route path="profile" element={<Profile />}></Route>
       </Routes>
     </BrowserRouter>
   );
