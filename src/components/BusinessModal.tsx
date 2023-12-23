@@ -17,7 +17,7 @@ function BusinessModal({ business }: { business: Business }) {
     <div className="">
       <div className="relative border rounded-xl">
         <img
-          src={imageUrl ? imageUrl : "/public/mercedes.jpg"}
+          src={imageUrl ? imageUrl : "/mercedes.jpg"}
           alt={name}
           className="w-full rounded-xl"
         />
