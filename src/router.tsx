@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
 import Car from "./pages/Car";
 import Bike from "./pages/Bike";
+import Profile from "./pages/Profile";
 import SignUpPage from "./pages/SignUpPage";
 import ProtectedRoute from "./utility/ProtectedRoute";
 
@@ -47,6 +48,7 @@ const Router = () => {
           />
         </Route>
         <Route path="/login" element={<LoginPage />}></Route>
+        <Route path="profile" element={<Profile />}></Route>
         <Route path="/signup" element={<SignUpPage />} />
       </Routes>
     </BrowserRouter>
