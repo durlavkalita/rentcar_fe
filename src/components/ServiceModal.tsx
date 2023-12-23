@@ -14,7 +14,7 @@ const ServiceModal = ({ service }: { service: ServiceDetails }) => {
       {/* Left Side (Image) */}
       <div className="flex-shrink-0 w-1/2">
         <img
-          src={imageUrl ? imageUrl : "/public/service.jpg"}
+          src={imageUrl ? imageUrl : "/service.jpg"}
           alt={name}
           className="w-full h-full object-cover rounded-xl"
         />

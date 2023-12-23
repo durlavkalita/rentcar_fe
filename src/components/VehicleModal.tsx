@@ -11,7 +11,7 @@ const VehicleModal = ({ vehicle }: { vehicle: VehicleDetails }) => {
   return (
     <div className="border mr-2 min-w-[35%] rounded-xl">
       <img
-        src={imageUrl ? imageUrl : "/public/mercedes.jpg"}
+        src={imageUrl ? imageUrl : "/mercedes.jpg"}
         alt={name}
         className="rounded-t-xl"
       />
