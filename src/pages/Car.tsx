@@ -2,14 +2,12 @@ import CarSearchBox from "../components/CarSearchBox";
 import HorizontalScrollableTags from "../components/HorizontalScrollableTags";
 
 const tags = [
-  "React",
-  "JavaScript",
-  "CSS",
-  "HTML",
-  "Redux",
-  "TypeScript",
-  "Hooks",
-  "Responsive",
+  "Hatchback",
+  "Crossover",
+  "Sedan",
+  "MPV",
+  "SUV",
+  "Pick-up"
 ];
 
 function Car() {
