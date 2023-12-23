@@ -4,7 +4,6 @@ import CategoryLine from "../components/CategoryLine";
 import ServiceList from "../components/ServiceList";
 import VehicleList from "../components/VehicleList";
 import BusinessModal from "../components/BusinessModal";
-import Navigation from "../components/Navigation";
 import { useAuth } from "../hooks/useAuth";
 
 const sampleServices = [
@@ -109,7 +108,6 @@ function Home() {
         <BusinessModal business={sample}></BusinessModal>
         <BusinessModal business={sample}></BusinessModal>
       </div>
-      <Navigation />
     </div>
   );
 }
