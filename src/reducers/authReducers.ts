@@ -1,18 +1,9 @@
-import { User } from "./../types/User";
+import { AuthState, AuthAction } from "../types/Auth";
 
-type AuthState = {
-  isAuthenticated: boolean;
-  token: string | null;
-  user: User;
-  error: string | null;
-};
-
-type AuthAction =
-  | { type: "LOGIN_SUCCESS"; payload: { token: string; user: User } }
-  | { type: "LOGIN_FAILURE"; payload: string }
-  | { type: "LOGOUT_SUCCESS" };
-
-export default function authReducers(authState: AuthState, action: AuthAction) {
+export default function authReducers(
+  authState: AuthState,
+  action: AuthAction
+): AuthState {
   switch (action.type) {
     case "LOGIN_SUCCESS": {
       console.log("login success");

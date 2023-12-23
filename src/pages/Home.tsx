@@ -5,6 +5,7 @@ import ServiceList from "../components/ServiceList";
 import VehicleList from "../components/VehicleList";
 import BusinessModal from "../components/BusinessModal";
 import Navigation from "../components/Navigation";
+import { useAuth } from "../hooks/useAuth";
 
 const sampleServices = [
   {
@@ -79,6 +80,9 @@ const sample = {
 };
 
 function Home() {
+  const auth = useAuth();
+  console.log(auth);
+
   return (
     <div className="mx-auto my-4 px-4 max-w-md md:border min-h-screen">
       <div className="container mb-4">
