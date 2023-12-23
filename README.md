@@ -1,3 +1,3 @@
 ## Todo -
 
-- [] create home page
+- [x] create home page

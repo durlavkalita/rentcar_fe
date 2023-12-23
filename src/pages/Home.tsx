@@ -3,7 +3,8 @@ import SearchBox from "../components/SearchBox";
 import CategoryLine from "../components/CategoryLine";
 import ServiceList from "../components/ServiceList";
 import VehicleList from "../components/VehicleList";
-import BussinessModal from "../components/BussinessModal";
+import BusinessModal from "../components/BusinessModal";
+import Navigation from "../components/Navigation";
 
 const sampleServices = [
   {
@@ -79,7 +80,7 @@ const sample = {
 
 function Home() {
   return (
-    <div className="mx-auto my-4 px-4 max-w-md md:border">
+    <div className="mx-auto my-4 px-4 max-w-md md:border min-h-screen">
       <div className="container mb-4">
         <UserInfo></UserInfo>
       </div>
@@ -99,8 +100,12 @@ function Home() {
       <div className="container py-4">
         <CategoryLine category="all services" />
         <div className="my-4"></div>
-        <BussinessModal business={sample}></BussinessModal>
+        <BusinessModal business={sample}></BusinessModal>
+        <BusinessModal business={sample}></BusinessModal>
+        <BusinessModal business={sample}></BusinessModal>
+        <BusinessModal business={sample}></BusinessModal>
       </div>
+      <Navigation />
     </div>
   );
 }
