@@ -1,5 +1,5 @@
 import { Car } from "./Car";
-import { User } from "./user";
+import { User } from "./User";
 
 export type Booking = {
   id: string;
