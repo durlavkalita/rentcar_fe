@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
 import LoginPage from "./pages/Auth";
+import Car from "./pages/Car";
 
 function Layout() {
   return (
@@ -19,6 +20,7 @@ const Router = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/demo" element={<Home />} />
+          <Route path="/car" element={<Car />} />
         </Route>
         <Route path="/login" element={<LoginPage />}></Route>
       </Routes>
