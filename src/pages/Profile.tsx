@@ -25,13 +25,13 @@ function Profile() {
             </div>
             <div className="shadow-xl m-8 rounded-md">
                 <div className="divide-y divide-solid">
-                    <div className="container flex justify-between p-5">
+                    <div className="flex justify-between p-5">
                         <span className="text-xl">Likes</span>
                         <div className="my-auto">
                             <FaRegHeart size={25} />
                         </div>
                     </div>
-                    <div className="container flex justify-between p-5">
+                    <div className="flex justify-between p-5">
                         <span className="text-xl">My Bookings</span>
                         <div className="my-auto">
                             <FaRegCalendarCheck size={25} />
