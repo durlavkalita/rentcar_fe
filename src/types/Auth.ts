@@ -17,18 +17,31 @@ export type AuthContextType = {
   dispatch: React.Dispatch<AuthAction>;
 };
 
-const token = localStorage.getItem("rentcar_token");
-const expiryTime = localStorage.getItem("rentcar_token_expiryTime");
+const pocketbase_auth = localStorage.getItem("pocketbase_auth");
+
+const pocketbase_data = pocketbase_auth
+  ? JSON.parse(pocketbase_auth)
+  : { token: null, user: null };
+
+const rentcar_token = pocketbase_data.token;
+const rentcar_user = {
+  id: pocketbase_data.id,
+  email: pocketbase_data.email,
+  name: pocketbase_data.name,
+  phone_number: pocketbase_data.phone_number,
+  avatar: pocketbase_data.avatar,
+};
 let isAuthenticated = false;
-if (token && expiryTime && new Date().getTime() < parseInt(expiryTime)) {
+if (rentcar_token) {
   isAuthenticated = true;
 }
+// if (token && expiryTime && new Date().getTime() < parseInt(expiryTime)) {
+//   isAuthenticated = true;
+// }
 
 export const initialState: AuthState = {
   isAuthenticated: isAuthenticated,
-  token: localStorage.getItem("rentcar_token") || null,
-  user: localStorage.getItem("rentcar_user")
-    ? JSON.parse(localStorage.getItem("rentcar_user")!)
-    : null,
+  token: rentcar_token,
+  user: rentcar_user,
   error: null,
 };
