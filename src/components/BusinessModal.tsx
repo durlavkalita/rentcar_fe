@@ -1,30 +1,17 @@
 import React from "react";
 import { FaRegClock, FaStar } from "react-icons/fa";
-
-type Business = {
-  name: string;
-  imageUrl: string | null;
-  location: string;
-  rating: string;
-  distance: string;
-  price: string;
-  cars: string[];
-};
+import { Business } from "../types/Business";
 
 function BusinessModal({ business }: { business: Business }) {
-  const { name, imageUrl, location, rating, distance, price, cars } = business;
+  const { name, location } = business;
   return (
     <div className="">
       <div className="relative border rounded-xl">
-        <img
-          src={imageUrl ? imageUrl : "/mercedes.jpg"}
-          alt={name}
-          className="w-full rounded-xl"
-        />
+        <img src="/mercedes.jpg" alt={name} className="w-full rounded-xl" />
 
         <div className="absolute bottom-0 right-0 p-2 bg-white bg-opacity-50 rounded-md">
           <div className="flex items-center">
-            <FaRegClock></FaRegClock> <span className="ml-1">{distance}</span>
+            <FaRegClock></FaRegClock> <span className="ml-1">{"25 min"}</span>
           </div>
         </div>
       </div>
@@ -33,7 +20,7 @@ function BusinessModal({ business }: { business: Business }) {
           <p className="text-xl font-bold py-1">{name}</p>
         </div>
         <div className="flex bg-green-600 items-center py-1 px-2 rounded-md">
-          <span className="mr-1 text-md font-semibold">{rating}</span>
+          <span className="mr-1 text-md font-semibold">{"4.2"}</span>
           <FaStar color="yellow"></FaStar>
         </div>
       </div>
@@ -42,11 +29,11 @@ function BusinessModal({ business }: { business: Business }) {
           <p className="text-md">{location}</p>
         </div>
         <div>
-          <p className="font-semibold">Price range: {price}</p>
+          <p className="font-semibold">Price range: {"2k-4k"}</p>
         </div>
       </div>
       <div className="mt-2">
-        <span>Cars Available: {cars.join(", ")}</span>
+        <span>Cars Available: {["kia", "suzuki", "honda"].join(", ")}</span>
       </div>
     </div>
   );
