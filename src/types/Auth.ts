@@ -25,11 +25,11 @@ const pocketbase_data = pocketbase_auth
 
 const rentcar_token = pocketbase_data.token;
 const rentcar_user = {
-  id: pocketbase_data.id,
-  email: pocketbase_data.email,
-  name: pocketbase_data.name,
-  phone_number: pocketbase_data.phone_number,
-  avatar: pocketbase_data.avatar,
+  id: pocketbase_data.model.id,
+  email: pocketbase_data.model.email,
+  name: pocketbase_data.model.name,
+  phone_number: pocketbase_data.model.phone_number,
+  avatar: pocketbase_data.model.avatar,
 };
 let isAuthenticated = false;
 if (rentcar_token) {
