@@ -1,10 +1,12 @@
 import { FaRegCalendarCheck, FaRegHeart, FaRegUser, FaSlidersH, FaUserEdit } from "react-icons/fa";
+import { useAuth } from "../hooks/useAuth";
 
 function Profile() {
+    const auth = useAuth();
     return (
         <div>
             <div className="flex justify-between p-4">
-                <div className="text-3xl my-auto mx-4">Hi User</div>
+                <div className="text-3xl my-auto mx-4">Hi {auth.state.user?.name}</div>
                 <div className="bg-blue-400 rounded-full p-10 mx-4">
                     <FaRegUser size={50} />
                 </div>
