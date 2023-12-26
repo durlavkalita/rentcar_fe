@@ -1,4 +1,4 @@
-import { Car } from "./Car";
+import { Car } from "./Vehicle";
 import { User } from "./User";
 
 export type Booking = {

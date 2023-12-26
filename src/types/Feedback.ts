@@ -1,5 +1,5 @@
 import { Business } from "./Business";
-import { Car } from "./Car";
+import { Car } from "./Vehicle";
 import { User } from "./user";
 
 export type Feedback = {
