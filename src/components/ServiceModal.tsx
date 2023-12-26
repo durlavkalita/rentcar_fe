@@ -1,20 +1,14 @@
-import React from "react";
+import { Business } from "../types/Business";
 
-type ServiceDetails = {
-  name: string;
-  location: string;
-  imageUrl: string | null;
-};
-
-const ServiceModal = ({ service }: { service: ServiceDetails }) => {
-  const { name, location, imageUrl } = service;
+const ServiceModal = ({ service }: { service: Business }) => {
+  const { name, location } = service;
 
   return (
     <div className="flex max-h-28 min-w-[55%] border border-gray-300 rounded-xl mr-2">
       {/* Left Side (Image) */}
       <div className="flex-shrink-0 w-1/2">
         <img
-          src={imageUrl ? imageUrl : "/service.jpg"}
+          src="/service.jpg"
           alt={name}
           className="w-full h-full object-cover rounded-xl"
         />
