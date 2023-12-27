@@ -1,19 +1,9 @@
 import React from "react";
 import { FaMapMarkerAlt, FaAngleDown, FaRegUser } from "react-icons/fa";
-import { useAuth } from "../hooks/useAuth";
-import { useNavigate } from "react-router-dom";
-import pb from "../services/pocketbase";
+import { Link } from "react-router-dom";
+// import pb from "../services/pocketbase";
 
 function UserInfo() {
-  const { dispatch } = useAuth();
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    dispatch({ type: "LOGOUT_SUCCESS" });
-    pb.authStore.clear();
-    navigate("/login");
-  };
-
   return (
     <div className="flex justify-between items-center">
       <div className="bg-green-600 rounded-full p-2">
@@ -29,9 +19,9 @@ function UserInfo() {
       </div>
       <div>
         <div className="bg-green-400 rounded-full p-2">
-          <button onClick={handleLogout}>
+          <Link to={"/profile"}>
             <FaRegUser size="25" />
-          </button>
+          </Link>
         </div>
       </div>
     </div>

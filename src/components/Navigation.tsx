@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHome, FaCar, FaMotorcycle, FaRegUserCircle } from "react-icons/fa";
+import { FaHome, FaCar, FaMotorcycle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Navigation = () => {
@@ -22,12 +22,6 @@ const Navigation = () => {
           <div className="flex flex-col items-center">
             <FaMotorcycle color="green" size="25"></FaMotorcycle>
             <span className="text-xs py-1">Bike</span>
-          </div>
-        </Link>
-        <Link to={"/profile"} className="hover:text-gray-400">
-          <div className="flex flex-col items-center">
-            <FaRegUserCircle color="green" size="25"></FaRegUserCircle>
-            <span className="text-xs py-1">Profile</span>
           </div>
         </Link>
       </div>

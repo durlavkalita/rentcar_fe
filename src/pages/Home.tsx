@@ -85,7 +85,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="mx-auto my-4 px-4 max-w-md md:border min-h-screen">
+    <div className="mx-auto my-4 px-4 max-w-md min-h-screen md:max-w-5xl">
       <div className="container mb-4">
         <UserInfo></UserInfo>
       </div>
